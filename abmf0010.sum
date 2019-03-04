@@ -1,0 +1,341 @@
+-------------------------------------------------------------------------------
+GPSPACE   Precise Point Positioning      (Version   1.10/25018/2018-09-07)      
+Natural Resources Canada, Geodetic Survey of Canada                             
+Copyright (c) 2018 Government of Canada                                         
+Under MIT Licence terms                                                         
+                                                                                
+-------------------------------------------------------------------------------
+
+
+ -------------------------------------------------------------------------------
+ SECTION 1. File Summary                 
+ -------------------------------------------------------------------------------
+ Content                  INPUT Filenames     
+ Observations             abmf0010.18o                                          
+ Processing options       gpsppp.cmd                                            
+ Satellite orbits         igs19821.sp3                                          
+ Satellite clocks         igs19821.clk_30s                                      
+                          OUTPUT Filenames    
+ Processing summary       abmf0010.sum                                          
+ Estimated parameters     abmf0010.pos                                          
+ Satellite residuals      abmf0010.res                                          
+ Session summary          abmf0010.ses                                          
+ Final Normal Eq.  (bin)  abmf0010.ipx                                          
+                          INTERNAL Filenames  
+ Filter thresholds        gpsppp.flt                                            
+ Satellite offsets        gpsppp.svb_gnss_yrly                                  
+ Antenna offsets          igs14.atx                                             
+ Ocean loading            gpsppp.olc                                            
+ ITR->NAD transform       gpsppp.trf                                            
+ -------------------------------------------------------------------------------
+
+
+ -------------------------------------------------------------------------------
+SECTION 2. Summary of processing parameters                 
+ -------------------------------------------------------------------------------
+
+ 2.1 Observation filter thresholds - CM                 
+     Multipath  :       150.0
+     Time gap   :       300.0
+     Narrowlane :         8.1 Satel. adaptive
+     Widelane   :       130.0 Satel. adaptive
+     P3 filtered:          NO
+     Code L1    :       P1|C1
+     Code L2    :       P2|C2
+     P1-C1 bias :     APPLIED
+     P2-C2 bias :     APPLIED
+
+ 2.2 Satellite antenna phase center (APC) offsets - MM    for 2018-01-01
+     Center of mass -> APC [Body frame X,Y,Z]                    
+     GPS IIR  [   0,   0,   0]
+     PRNs  02 11 13 14 16 18 19 20 21 22 23 28
+     vCLK  10 14 14 11 12 15 12 16 17 12 10 12
+     GPS IIRM [   0,   0,   0]
+     PRNs  05 07 12 15 17 29 31
+     vCLK  14 12 12 11 15 13 11
+     GPS IIF  [ 394,   0,1093]
+     PRNs  01 03 06 08 09 10 24 25 26 27 30 32
+     vCLK  01 01 01 15 01 02 23 01 01 01 01 01
+     GLN M    [-545,   0,2400]
+     PRNs  30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53
+     vCLK  01 11 01 09 09 09 10 09 09 09 ** 25 12 09 09 09 25 09 09 11 28 09 09 25
+     UNALLOCATED
+     PRNs  04
+
+ 2.3 Antenna phase center (APC) offsets - MM             NOT AVAILABLE       
+
+ 2.4 Reference frame transformation parameters               
+     ITRF (IGS14)->NAD83( CSRS)  AT EPOCH: 2018.0
+     Translations (Tx,y,z), Rotations (Rx,y,z), Scale (S)   
+
+        Tx       Ty       Tz      S        Rx       Ry      Rz
+       (cm)     (cm)     (cm)    (ppb)    (mas)    (mas)   (mas)
+    101.162 -191.401  -55.309   -0.207  -27.315    6.482  -10.521
+
+        dTx      dTy      dTz     dS       dRx      dRy     dRz
+       (cm/y)   (cm/y)   (cm/y)  (ppb/y)  (mas/y)  (mas/y) (mas/y)
+      0.079   -0.060   -0.144   -0.072   -0.067    0.757    0.051
+
+ 2.5 Ocean loading coefficients                           NOT FOUND
+
+ 2.6 Surface meteorological data                        
+
+     Temperature  (deg C):  25.37  (VMF1 model     )
+     Pressure        (Mb):1015.50  (VMF1 model     )
+     Relative humidity(%):  82.76  (VMF1 model     )
+
+
+ 2.7 Tropospheric models                                
+
+     Hydrostatic delay   : VMF1-site      
+     Wet delay           : Hopf(VMF) init 
+     Mapping functions   : VMF1-site      
+
+
+
+ -------------------------------------------------------------------------------
+ SECTION 3. Session Processing Summary 
+ -------------------------------------------------------------------------------
+ 3.1 Processing Options
+     User dynamics                :   STATIC                   
+     Observation processed        :   CODE&PHASE               
+     Frequency observed           :   L3                       
+     Satellite orbits             :   PRECISE                  
+     Satellite product input      :   CLK-RINEX                
+     Ionospheric model            :   L1&L2            Default 
+     Marker coordinates           :   ESTIMATED                
+     Troposphere zenith delay(TZD):   ESTIMATED+GRADIENTS      
+     Clock interpolation          :   NO                       
+     Parameter smoothing          :   YES                      
+     Reference frame              :   ITRF                     
+     Coordinate system            :   ELLIPSOIDAL              
+     Satellite clock interval  (s):           30
+     Pseudorange sigma         (m):        5.000
+     Carrier phase sigma       (m):        0.010
+     Code misc. test limit     (m):       45.000
+     Phase misc. test limit    (m):   DISABLED                 
+     TZD random walk       (mm/hr):        5.000
+     Tropo. Grad. rndm-walk(mm/hr):        0.100
+     Marker->ARP distance      (m):        0.000
+     Cutoff elevation        (deg):        5.000
+
+ 3.2 Observation Session
+
+     Marker name                       :   ABMF                                    
+     Start                             :   2018/01/01 00:00:00.00
+     End                               :   2018/01/01 23:59:30.00
+     Observation interval        (sec) :   30.00
+     Estimation interval         (sec) :   30.00
+     Number of epochs processed (%fix) :     2851    0%
+     Number of epochs rejected         :        0
+     Number of satellites processed    :       69
+     Number of observations processed  :    30190  GPS    
+     Number of observations rejected   :     2263  GPS    
+     Number of observations deweighted :        0  GPS    
+     Pseudorange residuals        (m)  :     0.96  GPS    
+     Carrier phase residuals      (cm) :     0.00  GPS    
+     Ambiguity fixed   (%obs  %ambs)   :   0%   0% GPS    
+     Number of observations processed  :        0  GLONASS
+     Number of observations rejected   :    22480  GLONASS
+     Number of observations deweighted :        0  GLONASS
+     Number of observations processed  :        0  GALILEO
+     Number of observations rejected   :    13501  GALILEO
+     Number of observations deweighted :        0  GALILEO
+
+ 3.3 Coordinate estimates
+
+ CARTESIAN           NAD83(CSRS )     ITRF (IGS14)   Sigma(m) NAD-ITR(m)
+         X (m)       2919786.3591     2919785.5670     0.0000     0.7922
+         Y (m)      -5383746.6928    -5383744.8659     0.0000    -1.8268
+         Z (m)       1774604.8691     1774604.8013     0.0000     0.0677
+
+ SIGMA/CORRELATIONS
+                         X(m)     Y(m)     Z(m)
+          X(m)         0.0000  -0.6770   0.4558
+          Y(m)                  0.0000  -0.5499
+          Z(m)                           0.0000
+
+ ELLIPSOIDAL    
+ Latitude  (dms)    16 15 44.2882    16 15 44.3042     0.0000    -0.4904
+ Longitude (dms)   -61 31 39.1386   -61 31 39.1327     0.0000    -0.1746
+ Elevation (m)           -23.8362         -25.7593     0.0000     1.9231
+
+ SIGMA/CORRELATIONS
+                       Lat(m)   Lon(m)     H(m)
+        Lat(m)         0.0000   0.0015  -0.0085
+        Lon(m)                  0.0000  -0.0197
+          H(m)                           0.0000
+
+ 3.4 Coordinate differences ITRF (IGS14)
+
+ CARTESIAN              ESTIMATED       A-PRIORI      Delta(m)     RMS(m)
+         X (m)       2919785.5670     2919786.4480    -0.8810     0.8810
+         Y (m)      -5383744.8659    -5383745.1780     0.3121     0.3121
+         Z (m)       1774604.8013     1774604.7340     0.0673     0.0673
+
+ ELLIPSOIDAL    
+ Latitude  (dms)    16 15 44.3042    16 15 44.2958     0.2591     0.2591
+ Longitude (dms)   -61 31 39.1327   -61 31 39.1116    -0.6257     0.6257
+ Elevation (m)           -25.7593         -25.1116    -0.6477     0.6477
+
+ 3.5 Receiver clock estimates                                
+
+     Reference Epoch                   :   2018/01/01 00:00:00.00
+     Filter                            :   BWD smoothed   
+
+     Constellation reference           :   GPS            
+     Clock Phase         (ns)          :        24.42         0.16
+     Phase Drift         (ns/day)      :        -5.55         0.29
+     RMS residuals       (ns)          :         4.36       2848
+
+
+ 3.6 Observation rejection table
+
+                                  #REJ/SLIP                     CODE       PHASE
+ PRN AC #ARC #AM  #OBS  TRK  SLP  CLK  EPH  IGP  RES  ELV    AVG   RMS    AVG  RMS 
+            %FIX  %FIX                 TIM  NRL  WDL  DCM    (m)   (m)   (cm) (cm)
+
+ G 1E   8  1 767   767    0    3    0    0    0    0   49  -0.30  0.87   0.00  0.0
+               0%    0%                  6    1    9  816                         
+ G 2    9  1 ***  1006    0    1    0    0    0    0   16  -0.07  0.81  -0.00  0.0
+               0%    0%                  3    0    6 1022                         
+ G 3    9  2 ***  1146    0    2    0    0    0    0  229   0.20  1.09   0.00  0.0
+               0%    0%                  5    1   49 1375                         
+ G 5    8  1 ***  1043    0    4    0    0    0    0   44  -0.03  1.00  -0.00  0.0
+               0%    0%                  9    0   10 1087                         
+ G 6E   8  1 ***  1073    0    0    0    0    0    0   28  -0.04  1.02  -0.00  0.0
+               0%    0%                  1    0    6 1101                         
+ G 7    9  3 702   702    0    7    0    0    0    0   72   0.08  0.76   0.00  0.0
+               0%    0%                 14    1   10  774                         
+ G 8    8  2 901   900    0    0    0    0    0    0   10   0.14  0.99  -0.00  0.0
+               0%    0%                  1    0    0  910                         
+ G 9    8  2 ***  1348    0    4    0    0    0    0   14  -0.03  1.14   0.00  0.0
+               0%    0%                  9    2   19 1362                         
+ G10    8  1 770   770    0    0    0    0    0    0   47  -0.37  0.80  -0.00  0.0
+               0%    0%                  1    0    6  817                         
+ G11    9  1 845   845    0    3    0    0    0    0   47   0.32  0.85   0.00  0.0
+               0%    0%                  8    2   11  892                         
+ G12    8  1 ***  1199    0    6    0    0    0    0  216  -0.18  0.98  -0.00  0.0
+               0%    0%                 12    1   24 1415                         
+ G13   10  1 793   793    0    5    0    0    0    0   49   0.58  0.92  -0.00  0.0
+               0%    0%                 10    0   12  842                         
+ G14    9  2 898   897    0   14    0    0    0    0   45   0.49  0.97  -0.00  0.0
+               0%    0%                 20    3    8  942                         
+ G15    9  1 964   964    0    1    0    0    0    0   48  -0.12  0.85  -0.00  0.0
+               0%    0%                  4    0    5 1012                         
+ G16    8  2 992   991    0    4    0    0    0    0   20   0.86  0.87   0.00  0.0
+               0%    0%                  6    0    2 1011                         
+ G17    8  1 ***  1004    0    0    0    0    0    0    6  -0.25  0.73  -0.00  0.0
+               0%    0%                  1    0    0 1010                         
+ G18   10  1 869   869    0    4    0    0    0    0   61   0.36  0.89   0.00  0.0
+               0%    0%                  9    0   25  930                         
+ G19    8  1 952   952    0    0    0    0    0    0   32  -0.15  0.80  -0.00  0.0
+               0%    0%                  1    0    3  984                         
+ G20   10  1 ***  1036    0    0    0    0    0    0   28   0.44  0.74  -0.00  0.0
+               0%    0%                  1    0    2 1064                         
+ G21    9  3 951   950    0    8    0    0    0    0  156   0.34  1.16  -0.00  0.0
+               0%    0%                 16    2   39 1106                         
+ G22    9  2 ***  1337    0    8    0    0    0    0   44   0.10  1.01   0.00  0.0
+               0%    0%                 15    1   35 1381                         
+ G23    9  3 ***  1133    0    9    0    0    0    0   96  -0.08  1.07   0.00  0.0
+               0%    0%                 18    1   33 1229                         
+ G24    8  1 773   773    0    6    0    0    0    0   49  -0.67  0.84  -0.00  0.0
+               0%    0%                 11    0   12  822                         
+ G25    8  2 912   912    0    9    0    0    0    0  165  -0.42  1.07   0.00  0.0
+               0%    0%                 18    1   33 1077                         
+ G26    8  2 939   938    0    1    0    0    0    0   18  -0.21  1.19   0.00  0.0
+               0%    0%                  2    0    0  956                         
+ G27    8  2 733   732    0    2    0    0    0    0   23  -0.26  0.84   0.00  0.0
+               0%    0%                  3    0    0  755                         
+ G28    9  1 821   821    0    2    0    0    0    0   32   0.26  0.82   0.00  0.0
+               0%    0%                  4    0    7  853                         
+ G29    9  1 ***  1189    0    1    0    0    0    0  203  -0.11  1.05   0.00  0.0
+               0%    0%                  3    1   20 1392                         
+ G30    8  1 ***  1083    0   15    0    0    0    0  219  -0.31  1.19  -0.00  0.0
+               0%    0%                 28    1   46 1302                         
+ G31   16  2 ***  1053    0    0    0    0    0    0   28  -0.23  1.01   0.00  0.0
+               0%    0%                  1    0    2 1081                         
+ G32    8  2 965   964    0   11    0    0    0    0   39  -0.03  0.70   0.00  0.0
+               0%    0%                 12    0    1 1003                         
+ R 1    0  3   0     0    0   26 1010    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 43   18   20    0                         
+ R 2    0  3   1     0    0    5 1246    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 11    1   15    0                         
+ R 3    0  3   1     0    0    9 1159    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 16    3   19    0                         
+ R 4    0  2   1     0    0    7  720    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 14    0    6    0                         
+ R 5    0  1   0     0    0   46  726    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 65    0   10    0                         
+ R 6    0  1   0     0    0    1  953    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  3    0    9    0                         
+ R 7    0  1   0     0    0    0 1010    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  1    0    2    0                         
+ R 8    0  1   0     0    0    3  855    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  6    0    9    0                         
+ R 9    0  2   0     0    0    3  974    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  7    0   13    0                         
+ R10    0  1   0     0    0   10  658    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 19    1   12    0                         
+ R11    0  2   0     0    0    4 1029    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 10    1   14    0                         
+ R12    0  2   0     0    1 1260    0    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%               1260    0    0    0                         
+ R13    0  2   1     0    0   11 1145    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 17    0    7    0                         
+ R14    0  2   1     0    0    8  827    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 13    1    4    0                         
+ R15    0  2   0     0    0   62  782    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 83    0   20    0                         
+ R16    0  2   0     0    0    4 1002    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  9    0   14    0                         
+ R17    0  2   1     0    0    0  996    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  1    0    5    0                         
+ R18    0  1   0     0    0    0 1025    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  1    0    1    0                         
+ R19    0  1   0     0    0    1  917    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  2    0    1    0                         
+ R20    0  1   0     0    0    2  670    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  4    0   15    0                         
+ R21    0  3   0     0    0    3   55    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  5    0    6    0                         
+ R22    0  3   1     0    0    3 1229    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  7    7   14    0                         
+ R23    0  3   1     0    0   15 1144    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 24    0   15    0                         
+ R24    0  2   1     0    0   76  788    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 99    0   18    0                         
+ E 1    0  2   0     0    0    2 1475    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  5    1   10    0                         
+ E 2    0  1   0     0    0    0  671    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  1    2    4    0                         
+ E 3    0  2   0     0    0    6  752    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 18   10   35    0                         
+ E 4    0  1   1     0    0    0 1203    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  0    0    0    0                         
+ E 5    0  1   1     0    0    0  240    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  0    0    0    0                         
+ E 7    0  2   0     0    0    5 1541    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                 10    2   11    0                         
+ E 8    0  1   0     0    0    1 1364    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  3    4   19    0                         
+ E 9    0  1   1     0    0    1  608    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  3    0    1    0                         
+ E11    0  3   1     0    0    1  353    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  7    2   19    0                         
+ E12    0  2   1     0    0    1 1075    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  2    2   12    0                         
+ E19    0  1   0     0    0    1 1321    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  2    2    7    0                         
+ E24    0  1   1     0    0    0  584    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  0    0    0    0                         
+ E26    0  1   0     0    0    0 1332    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  1    0    1    0                         
+ E30    0  1   0     0    0    1  963    0    0    0    0   0.00  0.00   0.00  0.0
+               0%    0%                  3    1    2    0                         
+
+ 3.7 List of observation outliers
+
+                                 CODE               PHASE
+                            RES       MAX       RES       MAX DIR
+PRN   HH:MM:SS.SSS          (m)       (m)      (cm)      (cm)

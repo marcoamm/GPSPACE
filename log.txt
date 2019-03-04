@@ -1,0 +1,6 @@
+./ppp abmf0010.18o
+./ppp gpsppp.cmd
+./ppp 0,0
+./ppp 0,0
+./ppp igs19821.sp3
+./ppp igs19821.clk_30s

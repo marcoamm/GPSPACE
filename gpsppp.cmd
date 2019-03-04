@@ -1,4 +1,4 @@
-' UT DAYS OBSERVED                      (1-45)'                   2
+' UT DAYS OBSERVED                      (1-45)'                   1
 ' USER DYNAMICS         (1=STATIC,2=KINEMATIC)'                   1
 ' OBSERVATION TO PROCESS         (1=COD,2=C&P)'                   2
 ' FREQUENCY TO PROCESS        (1=L1,2=L2,3=L3)'                   3
